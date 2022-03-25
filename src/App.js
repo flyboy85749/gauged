@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState } from 'react'
+import BarChart from "./components/BarChart";
+import {LanguageData}  from './Data'
 
-function App() {
+const App = () => {
+
+  const [languageData, setLanguageData] = useState({
+    labels: LanguageData.map((data) => data.name),
+    datasets: [{
+      label: 'Popularity of Programming Languages',
+      data: LanguageData.map((data) => data.avgSalary),
+backgroundColor: ['red', 'yellow', 'blue', 'green', 'purple']
+    }]
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div style={{width: 700}}>
+      <BarChart chartData={languageData}/>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

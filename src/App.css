@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+/* .chart {
+  background-color: aliceblue;
+} */
+
+body {
+  height: 100vh;
+}
