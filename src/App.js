@@ -10,7 +10,7 @@ const App = () => {
     datasets: [{
       label: 'Popularity of Programming Languages',
       data: LanguageData.map((data) => data.avgSalary),
-backgroundColor: ['red', 'yellow', 'blue', 'green', 'purple']
+backgroundColor: ['#9896D9', '#8F8EBF', '#A0D9CE', '#D9D4D0', '#F29188']
     }]
   })
   return (
