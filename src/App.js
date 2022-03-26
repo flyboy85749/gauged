@@ -1,8 +1,10 @@
 import "./App.css";
 import React, { useState } from "react";
-import BarChart from "./components/BarChart";
-import Table from "./components/Table";
 import { LanguageData } from "./Data";
+import BarChart from "./components/BarChart";
+import DoughnutChart from "./components/Doughnut";
+import Table from "./components/Table"
+
 
 const App = () => {
   const [languageData, setLanguageData] = useState({
@@ -28,12 +30,15 @@ const App = () => {
 
 
   return (
-    <div>
-      <div style={{ width: 700 }}>
+    <div className="container">
+      <div>
+        <Table chartData={languageData}/>
+      </div>
+      <div style={{ width: 600 }}>
         <BarChart chartData={languageData} />
       </div>
-      <div>
-        <Table />
+      <div style={{ width: 300 }}>
+        <DoughnutChart chartData={languageData} />
       </div>
     </div>
   );
