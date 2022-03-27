@@ -9,3 +9,5 @@ Color scheme from https://color.adobe.com/trends/Graphic-design
 The table uses react-table. Though the info is currently hard coded, it can be pulled from an API also, to make the table dynamic. 
 
 Used minimal CSS, including the original App.css. Used flexbox to easily align the charts in three columns on large screens.
+
+<img src="/public/gauged_screenshot.png" />
